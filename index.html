@@ -1,1 +1,19 @@
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
 
+# Obtener la clave desde el entorno
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Configurar la clave de la API
+openai.api_key = api_key
+
+# Hacemos una petición a ChatGPT
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": "Dime un dato curioso sobre las cotorras."}
+    ]
+)
+
+# Mostramos la respuesta
+print(response.choices[0].message.content)
