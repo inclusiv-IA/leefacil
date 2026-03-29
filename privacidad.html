@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Lee Fácil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #1e3a8a;
+      --azul-medio: #2563eb;
+      --azul-claro: #eff6ff;
+      --crema: #f5f0eb;
+      --crema-oscuro: #e8e0d8;
+      --gris: #6b7280;
+      --negro: #1a1a2e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--crema);
+      color: var(--negro);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: rgba(245, 240, 235, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--crema-oscuro);
+    }
+
+    .nav-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--azul);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      color: var(--azul-medio);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-back:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--azul-claro);
+      color: var(--azul-medio);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--azul);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 24px;
+      border: 1px solid var(--crema-oscuro);
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      color: var(--gris);
+      line-height: 1.8;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card a {
+      color: var(--azul-medio);
+      text-decoration: none;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    .version-label {
+      font-size: 0.8rem;
+      color: var(--gris);
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background: var(--negro);
+      color: rgba(255,255,255,0.6);
+      padding: 32px 40px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 40px 24px; }
+      h1 { font-size: 1.8rem; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="icon.png" alt="Lee Fácil" style="height:40px; vertical-align:middle;">
+    </a>
+    <a href="index.html" class="nav-back">← Volver</a>
+  </nav>
+
+  <div class="container">
+    <span class="badge">Legal</span>
+    <h1>Política de Privacidad</h1>
+    <p class="version-label">Última actualización: marzo de 2026</p>
+
+    <div class="card">
+      <h2>¿Qué es Lee Fácil?</h2>
+      <p>Lee Fácil es una app para el móvil.</p>
+      <p>La app convierte textos difíciles en textos fáciles de leer.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Qué hace la app con tus fotos?</h2>
+      <p>La app usa la cámara de tu móvil.</p>
+      <p>Sacas una foto a un texto.</p>
+      <p>La app lee el texto de la foto.</p>
+      <p>Después borra la foto.</p>
+      <p>No guardamos tus fotos.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Con quién compartimos tus datos?</h2>
+      <p>Usamos un servicio que se llama Anthropic.</p>
+      <p>Anthropic lee el texto de tu foto para adaptarlo.</p>
+      <p>No compartimos tus datos con nadie más.</p>
+      <p>Puedes consultar la política de privacidad de Anthropic en <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Permisos que solicita la app</h2>
+      <p>La app solicita permiso para usar la cámara del dispositivo.</p>
+      <p>Este permiso es necesario para el funcionamiento de la app.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Cómo contactar con nosotros?</h2>
+      <p>Si tienes dudas, escríbenos.</p>
+      <p>Nuestro correo es: <a href="mailto:inclusivia.es@gmail.com">inclusivia.es@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>© 2026 Lee Fácil · <a href="privacidad.html">Política de privacidad</a></div>
+  </footer>
+
+</body>
+</html>
