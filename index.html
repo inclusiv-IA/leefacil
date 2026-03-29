@@ -655,13 +655,13 @@
     
       </div>
       <div>
-        <form class="contact-form" onsubmit="return false;">
-          <input type="text" class="form-input" placeholder="Tu nombre">
-          <input type="email" class="form-input" placeholder="Tu email">
-          <input type="text" class="form-input" placeholder="Organización (opcional)">
-          <textarea class="form-input" placeholder="Tu mensaje"></textarea>
-          <button type="submit" class="btn-enviar">Enviar mensaje</button>
-        </form>
+      <form class="contact-form" action="https://formspree.io/f/mqegpjlr" method="POST">
+  <input type="text" name="nombre" class="form-input" placeholder="Tu nombre">
+  <input type="email" name="email" class="form-input" placeholder="Tu email">
+  <input type="text" name="organizacion" class="form-input" placeholder="Organización (opcional)">
+  <textarea name="message" class="form-input" placeholder="Tu mensaje"></textarea>
+  <button type="submit" class="btn-enviar">Enviar mensaje</button>
+</form>
       </div>
     </div>
   </section>
