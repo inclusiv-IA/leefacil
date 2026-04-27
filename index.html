@@ -386,22 +386,62 @@
     }
 
     /* DESCARGA */
-    <section class="descarga-section" id="descarga">
-    <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
-    <h2 class="section-title">Descarga Lee Fácil gratis</h2>
-    <p class="section-text">Disponible gratuitamente para Android.</p>
-    <a 
-      href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
-      class="btn-primary"
-      style="font-size:1.3rem; padding:20px 48px;"
-      download
-    >
-      📲 Descargar APK
-    </a>
-    <p style="color:rgba(255,255,255,0.5); margin-top:20px; font-size:0.9rem;">
-      Próximamente en Google Play
-    </p>
-  </section>
+    .descarga-section {
+      background: linear-gradient(135deg, var(--azul) 0%, #1d4ed8 100%);
+      text-align: center;
+      color: white;
+    }
+
+    .descarga-section .section-title {
+      color: white;
+      max-width: 100%;
+    }
+
+    .descarga-section .section-text {
+      color: rgba(255,255,255,0.8);
+      margin: 0 auto 40px;
+    }
+
+    /* CONTACTO */
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+    .form-input {
+      padding: 14px 18px;
+      border: 1px solid var(--crema-oscuro);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: white;
+      color: var(--negro);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus { border-color: var(--azul-medio); }
+    textarea.form-input { min-height: 120px; resize: vertical; }
+
+    .btn-enviar {
+      background: var(--azul-medio);
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-enviar:hover { background: var(--azul); }
+
     /* FOOTER */
     footer {
       background: var(--negro);
@@ -460,8 +500,8 @@
       <h1>Cualquier texto,<br>en lectura fácil.</h1>
       <p>Lee Fácil convierte textos difíciles<br>en frases cortas y sencillas al instante.<br>Solo saca una foto.</p>
       <div class="hero-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil" class="btn-primary">
-          Descargar gratis
+        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk" class="btn-primary" download>
+          📲 Descargar gratis
         </a>
         <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
       </div>
@@ -572,16 +612,18 @@
   <section class="descarga-section" id="descarga">
     <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
     <h2 class="section-title">Descarga Lee Fácil gratis</h2>
-    <p class="section-text">Disponible gratuitamente en Google Play.</p>
+    <p class="section-text">Disponible gratuitamente para Android.</p>
     <a 
-      href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil"
-      class="google-play-badge"
+      href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
+      class="btn-primary"
+      style="font-size:1.3rem; padding:20px 48px;"
+      download
     >
-      <img 
-        alt="Disponible en Google Play"
-        src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png"
-      />
+      📲 Descargar APK
     </a>
+    <p style="color:rgba(255,255,255,0.5); margin-top:20px; font-size:0.9rem;">
+      Próximamente en Google Play
+    </p>
   </section>
 
   <!-- CONTACTO -->
