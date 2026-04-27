@@ -386,98 +386,22 @@
     }
 
     /* DESCARGA */
-    .descarga-section {
-      background: linear-gradient(135deg, var(--azul) 0%, #1d4ed8 100%);
-      text-align: center;
-      color: white;
-    }
-
-    .descarga-section .section-title {
-      color: white;
-      max-width: 100%;
-    }
-
-    .descarga-section .section-text {
-      color: rgba(255,255,255,0.8);
-      margin: 0 auto 40px;
-    }
-
-    .google-play-badge {
-      display: inline-block;
-      transition: all 0.2s;
-      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
-    }
-
-    .google-play-badge:hover {
-      transform: translateY(-2px);
-      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.35));
-    }
-
-    .google-play-badge img {
-      height: 80px;
-      display: block;
-    }
-
-    /* CONTACTO */
-    .contacto-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .contact-icon {
-      width: 48px; height: 48px;
-      background: var(--azul-claro);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-
-    .contact-label { font-size: 0.85rem; color: var(--gris); margin-bottom: 4px; }
-    .contact-value { font-weight: 600; color: var(--azul); }
-
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-
-    .form-input {
-      padding: 14px 18px;
-      border: 1px solid var(--crema-oscuro);
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 1rem;
-      background: white;
-      color: var(--negro);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .form-input:focus { border-color: var(--azul-medio); }
-    textarea.form-input { min-height: 120px; resize: vertical; }
-
-    .btn-enviar {
-      background: var(--azul-medio);
-      color: white;
-      padding: 14px;
-      border-radius: 12px;
-      border: none;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .btn-enviar:hover { background: var(--azul); }
-
+    <section class="descarga-section" id="descarga">
+    <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
+    <h2 class="section-title">Descarga Lee Fácil gratis</h2>
+    <p class="section-text">Disponible gratuitamente para Android.</p>
+    <a 
+      href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
+      class="btn-primary"
+      style="font-size:1.3rem; padding:20px 48px;"
+      download
+    >
+      📲 Descargar APK
+    </a>
+    <p style="color:rgba(255,255,255,0.5); margin-top:20px; font-size:0.9rem;">
+      Próximamente en Google Play
+    </p>
+  </section>
     /* FOOTER */
     footer {
       background: var(--negro);
