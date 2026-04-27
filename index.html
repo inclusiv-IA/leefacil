@@ -26,7 +26,6 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -65,7 +64,6 @@
 
     .nav-links a:hover { color: var(--azul); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -159,7 +157,6 @@
 
     .btn-secondary:hover { background: var(--azul-claro); }
 
-    /* PHONE MOCKUP */
     .hero-visual {
       display: flex;
       justify-content: center;
@@ -224,7 +221,6 @@
       font-weight: 700;
     }
 
-    /* STATS */
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -255,7 +251,6 @@
       margin-top: 6px;
     }
 
-    /* SECTIONS */
     section { padding: 100px 80px; }
 
     .section-label {
@@ -286,7 +281,6 @@
       margin-bottom: 40px;
     }
 
-    /* COMO FUNCIONA */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -337,7 +331,6 @@
 
     .step-desc { color: var(--gris); line-height: 1.6; font-size: 0.95rem; }
 
-    /* VIDEO */
     .video-section {
       background: var(--azul);
       color: white;
@@ -359,7 +352,6 @@
       display: block;
     }
 
-    /* CAPTURAS */
     .capturas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -385,7 +377,6 @@
       display: block;
     }
 
-    /* DESCARGA */
     .descarga-section {
       background: linear-gradient(135deg, var(--azul) 0%, #1d4ed8 100%);
       text-align: center;
@@ -402,7 +393,22 @@
       margin: 0 auto 40px;
     }
 
-    /* CONTACTO */
+    .google-play-badge {
+      display: inline-block;
+      transition: all 0.2s;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+    }
+
+    .google-play-badge:hover {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.35));
+    }
+
+    .google-play-badge img {
+      height: 80px;
+      display: block;
+    }
+
     .contacto-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -442,7 +448,6 @@
 
     .btn-enviar:hover { background: var(--azul); }
 
-    /* FOOTER */
     footer {
       background: var(--negro);
       color: rgba(255,255,255,0.6);
@@ -455,13 +460,11 @@
     footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     footer a:hover { color: white; }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
       .hero-visual { order: -1; }
@@ -480,7 +483,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">
       <img src="icon.png" alt="Lee Fácil" style="height:40px; vertical-align:middle;">
@@ -493,7 +495,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
       <span class="hero-badge">App gratuita · Android</span>
@@ -528,7 +529,6 @@
     </div>
   </section>
 
-  <!-- STATS -->
   <div class="stats">
     <div class="stat">
       <span class="stat-num">3</span>
@@ -544,7 +544,6 @@
     </div>
   </div>
 
-  <!-- COMO FUNCIONA -->
   <section id="como-funciona">
     <span class="section-label">Cómo funciona</span>
     <h2 class="section-title">Tres pasos.<br>Sin complicaciones.</h2>
@@ -571,7 +570,6 @@
     </div>
   </section>
 
-  <!-- VIDEO -->
   <section class="video-section" id="demo">
     <span class="section-label" style="color:rgba(255,255,255,0.6)">Demo</span>
     <h2 class="section-title">Mírala en acción</h2>
@@ -581,7 +579,6 @@
     </div>
   </section>
 
-  <!-- CAPTURAS -->
   <section id="capturas">
     <span class="section-label">Capturas</span>
     <h2 class="section-title">Así se ve Lee Fácil</h2>
@@ -598,7 +595,6 @@
     </div>
   </section>
 
-  <!-- HISTORIA -->
   <section id="historia" style="background: white;">
     <span class="section-label">Historia del proyecto</span>
     <h2 class="section-title">Desde la vida real,<br>para la vida real.</h2>
@@ -608,7 +604,6 @@
     <p class="section-text">Especialmente útil<br>para personas con dificultades de comprensión lectora,<br>discapacidad intelectual,<br>personas mayores,<br>o cualquiera que necesite<br>entender mejor un texto difícil.</p>
   </section>
 
-  <!-- DESCARGA -->
   <section class="descarga-section" id="descarga">
     <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
     <h2 class="section-title">Descarga Lee Fácil gratis</h2>
@@ -616,17 +611,23 @@
     <a 
       href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
       class="btn-primary"
-      style="font-size:1.3rem; padding:20px 48px;"
+      style="font-size:1.2rem; padding:18px 40px; margin-bottom:20px;"
       download
     >
       📲 Descargar APK
     </a>
-    <p style="color:rgba(255,255,255,0.5); margin-top:20px; font-size:0.9rem;">
-      Próximamente en Google Play
-    </p>
+    <br><br>
+    <a 
+      href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil"
+      class="google-play-badge"
+    >
+      <img 
+        alt="Disponible en Google Play"
+        src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png"
+      />
+    </a>
   </section>
 
-  <!-- CONTACTO -->
   <section id="contacto">
     <div class="contacto-grid">
       <div>
@@ -646,7 +647,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div>© 2026 Lee Fácil · <a href="privacidad.html">Política de privacidad</a></div>
     <div>Desarrollada con ❤️ en Gijón, Asturias</div>
