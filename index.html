@@ -51,6 +51,7 @@
       display: flex;
       gap: 32px;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
@@ -63,6 +64,18 @@
     }
 
     .nav-links a:hover { color: var(--azul); }
+
+    .nav-lang {
+      background: var(--azul-claro);
+      color: var(--azul) !important;
+      padding: 8px 16px;
+      border-radius: 100px;
+      transition: all 0.2s;
+    }
+    .nav-lang:hover {
+      background: var(--azul-medio);
+      color: white !important;
+    }
 
     .hero {
       min-height: 100vh;
@@ -136,6 +149,8 @@
       letter-spacing: 0.3px;
       transition: all 0.2s;
       box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+      border: none;
+      cursor: pointer;
     }
 
     .btn-primary:hover {
@@ -156,6 +171,25 @@
     }
 
     .btn-secondary:hover { background: var(--azul-claro); }
+
+    .btn-english {
+      display: inline-block;
+      color: var(--azul);
+      padding: 16px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      background: white;
+      border: 2px dashed var(--azul-medio);
+      transition: all 0.2s;
+    }
+    .btn-english:hover {
+      background: var(--azul-medio);
+      color: white;
+      border-style: solid;
+      transform: translateY(-2px);
+    }
 
     .hero-visual {
       display: flex;
@@ -346,10 +380,40 @@
       max-width: 800px;
     }
 
-    .video-wrapper video {
+    .video-wrapper iframe {
       width: 100%;
+      height: 500px;
       border-radius: 20px;
       display: block;
+      border: none;
+    }
+
+    .btn-youtube {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FF0000;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 0.2s;
+      margin-top: 28px;
+      box-shadow: 0 8px 24px rgba(255,0,0,0.25);
+    }
+
+    .btn-youtube:hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255,0,0,0.35);
+    }
+
+    .btn-youtube svg {
+      width: 22px;
+      height: 22px;
+      fill: white;
     }
 
     .capturas-grid {
@@ -386,6 +450,8 @@
     .descarga-section .section-title {
       color: white;
       max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .descarga-section .section-text {
@@ -393,20 +459,68 @@
       margin: 0 auto 40px;
     }
 
-    .google-play-badge {
+    .descarga-versiones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .version-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 36px 28px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.3s;
+    }
+
+    .version-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-4px);
+    }
+
+    .version-flag {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .version-titulo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: white;
+    }
+
+    .version-desc {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .btn-descarga-version {
       display: inline-block;
+      background: white;
+      color: var(--azul);
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
       transition: all 0.2s;
-      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.25));
+      width: 100%;
+      text-align: center;
     }
 
-    .google-play-badge:hover {
+    .btn-descarga-version:hover {
       transform: translateY(-2px);
-      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.35));
-    }
-
-    .google-play-badge img {
-      height: 80px;
-      display: block;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
     .contacto-grid {
@@ -455,10 +569,45 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     footer a:hover { color: white; }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      transition: all 0.2s;
+    }
+
+    .footer-social a:hover {
+      background: #FF0000;
+      transform: translateY(-2px);
+    }
+
+    .footer-social svg {
+      width: 20px;
+      height: 20px;
+      fill: rgba(255,255,255,0.7);
+      transition: fill 0.2s;
+    }
+
+    .footer-social a:hover svg {
+      fill: white;
+    }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -474,10 +623,12 @@
       .steps-grid { grid-template-columns: 1fr; }
       .capturas-grid { grid-template-columns: 1fr; }
       .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
+      .descarga-versiones { grid-template-columns: 1fr; gap: 20px; }
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
       .hero-buttons { flex-direction: column; align-items: flex-start; }
+      .video-wrapper iframe { height: 300px; }
     }
   </style>
 </head>
@@ -492,6 +643,7 @@
       <li><a href="#historia">Historia</a></li>
       <li><a href="#descarga">Descargar</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#descarga" class="nav-lang" lang="en">🇬🇧 English</a></li>
     </ul>
   </nav>
 
@@ -505,6 +657,9 @@
           📲 Descargar gratis
         </a>
         <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
+        <a href="https://github.com/inclusiv-IA/EasyRead-en/releases/download/v1.0.0/app-release.apk" class="btn-english" download lang="en">
+          🇬🇧 Easy Read (English)
+        </a>
       </div>
     </div>
     <div class="hero-visual">
@@ -575,8 +730,14 @@
     <h2 class="section-title">Mírala en acción</h2>
     <p class="section-text">Una carta de Hacienda, una receta médica, un contrato...<br>Lee Fácil lo adapta todo.</p>
     <div class="video-wrapper">
-      <iframe width="100%" height="500" src="https://www.youtube.com/embed/fB-IPXdptGM?si=Kkni9WaIGATMh0a3" title="Video Demo Lee Fácil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:20px; display:block;"></iframe>
+      <iframe src="https://www.youtube.com/embed/fB-IPXdptGM?si=Kkni9WaIGATMh0a3" title="Video Demo Lee Fácil" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <a href="https://www.youtube.com/channel/UCstNtfC8M6ji_bsGLoEp4NQ" class="btn-youtube" target="_blank" rel="noopener" aria-label="Ver más vídeos en mi canal de YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+      Ver más vídeos en YouTube
+    </a>
   </section>
 
   <section id="capturas">
@@ -606,26 +767,35 @@
 
   <section class="descarga-section" id="descarga">
     <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
-    <h2 class="section-title">Descarga Lee Fácil gratis</h2>
-    <p class="section-text">Disponible gratuitamente para Android.</p>
-    <a 
-      href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
-      class="btn-primary"
-      style="font-size:1.2rem; padding:18px 40px; margin-bottom:20px;"
-      download
-    >
-      📲 Descargar APK
-    </a>
-    <br><br>
-    <a 
-      href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil"
-      class="google-play-badge"
-    >
-      <img 
-        alt="Disponible en Google Play"
-        src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png"
-      />
-    </a>
+    <h2 class="section-title">Descarga la app</h2>
+    <p class="section-text">Elige tu idioma. Ambas versiones son gratuitas y para Android.</p>
+
+    <div class="descarga-versiones">
+      <!-- Versión española -->
+      <div class="version-card">
+        <span class="version-flag">🇪🇸</span>
+        <h3 class="version-titulo">Lee Fácil</h3>
+        <p class="version-desc">Versión en español.<br>Convierte cualquier texto en lectura fácil.</p>
+        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
+           class="btn-descarga-version"
+           download>
+          📲 Descargar APK
+        </a>
+      </div>
+
+      <!-- Versión inglesa -->
+      <div class="version-card">
+        <span class="version-flag">🇬🇧</span>
+        <h3 class="version-titulo" lang="en">Easy Read</h3>
+        <p class="version-desc" lang="en">English version.<br>Turns any text into easy-to-read content.</p>
+        <a href="https://github.com/inclusiv-IA/EasyRead-en/releases/download/v1.0.0/app-release.apk"
+           class="btn-descarga-version"
+           download
+           lang="en">
+          📲 Download APK
+        </a>
+      </div>
+    </div>
   </section>
 
   <section id="contacto">
@@ -649,6 +819,13 @@
 
   <footer>
     <div>© 2026 Lee Fácil · <a href="privacidad.html">Política de privacidad</a></div>
+    <div class="footer-social">
+      <a href="https://www.youtube.com/channel/UCstNtfC8M6ji_bsGLoEp4NQ" target="_blank" rel="noopener" aria-label="Canal de YouTube de Lee Fácil">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+    </div>
     <div>Desarrollada con ❤️ en Gijón, Asturias</div>
   </footer>
 
