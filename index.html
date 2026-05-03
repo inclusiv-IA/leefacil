@@ -26,6 +26,41 @@
       overflow-x: hidden;
     }
 
+    /* ── Selector de idioma ── */
+    .lang-switcher {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 200;
+      display: flex;
+      gap: 6px;
+      background: white;
+      padding: 5px 7px;
+      border-radius: 30px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--crema-oscuro);
+    }
+    .lang-switcher a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      transition: transform 0.2s, background 0.2s;
+      background: transparent;
+    }
+    .lang-switcher a:hover {
+      transform: scale(1.15);
+      background: var(--crema);
+    }
+    .lang-switcher a.active {
+      background: var(--azul-claro);
+      box-shadow: 0 0 0 2px var(--azul-medio);
+    }
+
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -130,484 +165,167 @@
       max-width: 480px;
     }
 
-    .hero-buttons {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    .hero-buttons { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 
     .btn-primary {
-      display: inline-block;
-      background: var(--azul-medio);
-      color: white;
-      padding: 16px 36px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      transition: all 0.2s;
-      box-shadow: 0 8px 24px rgba(37,99,235,0.3);
-      border: none;
-      cursor: pointer;
+      display: inline-block; background: var(--azul-medio); color: white;
+      padding: 16px 36px; border-radius: 14px; text-decoration: none;
+      font-size: 1.05rem; font-weight: 600; letter-spacing: 0.3px;
+      transition: all 0.2s; box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+      border: none; cursor: pointer;
     }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(37,99,235,0.4);
-    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37,99,235,0.4); }
 
     .btn-secondary {
-      display: inline-block;
-      color: var(--azul);
-      padding: 16px 36px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      border: 2px solid var(--azul-claro);
-      transition: all 0.2s;
+      display: inline-block; color: var(--azul); padding: 16px 36px;
+      border-radius: 14px; text-decoration: none; font-size: 1.05rem;
+      font-weight: 600; border: 2px solid var(--azul-claro); transition: all 0.2s;
     }
-
     .btn-secondary:hover { background: var(--azul-claro); }
 
     .btn-english {
-      display: inline-block;
-      color: var(--azul);
-      padding: 16px 28px;
-      border-radius: 14px;
-      text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      background: white;
-      border: 2px dashed var(--azul-medio);
-      transition: all 0.2s;
+      display: inline-block; color: var(--azul); padding: 16px 28px;
+      border-radius: 14px; text-decoration: none; font-size: 1.05rem;
+      font-weight: 600; background: white; border: 2px dashed var(--azul-medio); transition: all 0.2s;
     }
-    .btn-english:hover {
-      background: var(--azul-medio);
-      color: white;
-      border-style: solid;
-      transform: translateY(-2px);
-    }
+    .btn-english:hover { background: var(--azul-medio); color: white; border-style: solid; transform: translateY(-2px); }
 
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      animation: fadeUp 0.8s ease 0.2s both;
-    }
+    .hero-visual { display: flex; justify-content: center; animation: fadeUp 0.8s ease 0.2s both; }
 
     .phone {
-      width: 260px;
-      height: 520px;
-      background: white;
-      border-radius: 36px;
+      width: 260px; height: 520px; background: white; border-radius: 36px;
       box-shadow: 0 40px 80px rgba(30,58,138,0.15), 0 0 0 2px rgba(30,58,138,0.08);
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      padding: 40px 20px 28px;
-      gap: 20px;
+      overflow: hidden; position: relative; display: flex; flex-direction: column;
+      padding: 40px 20px 28px; gap: 20px;
     }
-
-    .phone-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--azul);
-      text-align: center;
-    }
-
-    .phone-card {
-      background: var(--crema);
-      border-radius: 14px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .phone-step {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--crema-oscuro);
-    }
-
+    .phone-title { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--azul); text-align: center; }
+    .phone-card { background: var(--crema); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .phone-step { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--crema-oscuro); }
     .phone-step:last-child { border-bottom: none; }
     .phone-step-emoji { font-size: 1.6rem; width: 36px; text-align: center; }
-
-    .phone-step-text {
-      font-size: 0.9rem;
-      color: var(--negro);
-      font-weight: 500;
-    }
-
-    .phone-btn {
-      background: var(--azul-medio);
-      color: white;
-      border-radius: 14px;
-      padding: 14px;
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 700;
-    }
+    .phone-step-text { font-size: 0.9rem; color: var(--negro); font-weight: 500; }
+    .phone-btn { background: var(--azul-medio); color: white; border-radius: 14px; padding: 14px; text-align: center; font-size: 1rem; font-weight: 700; }
 
     .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--crema-oscuro);
-      margin: 0 80px;
-      border-radius: 20px;
-      overflow: hidden;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      background: var(--crema-oscuro); margin: 0 80px; border-radius: 20px; overflow: hidden;
     }
-
-    .stat {
-      background: white;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--azul);
-      display: block;
-    }
-
-    .stat-label {
-      color: var(--gris);
-      font-size: 0.95rem;
-      margin-top: 6px;
-    }
+    .stat { background: white; padding: 40px; text-align: center; }
+    .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 900; color: var(--azul); display: block; }
+    .stat-label { color: var(--gris); font-size: 0.95rem; margin-top: 6px; }
 
     section { padding: 100px 80px; }
 
     .section-label {
-      display: inline-block;
-      color: var(--azul-medio);
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
+      display: inline-block; color: var(--azul-medio); font-size: 1rem;
+      font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;
     }
-
     .section-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      font-weight: 900;
-      color: var(--azul);
-      margin-bottom: 20px;
-      max-width: 700px;
-      line-height: 1.2;
+      font-family: 'Poppins', sans-serif; font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 900; color: var(--azul); margin-bottom: 20px; max-width: 700px; line-height: 1.2;
     }
+    .section-text { font-size: 1.1rem; color: var(--gris); line-height: 1.8; max-width: 600px; margin-bottom: 40px; }
 
-    .section-text {
-      font-size: 1.1rem;
-      color: var(--gris);
-      line-height: 1.8;
-      max-width: 600px;
-      margin-bottom: 40px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 60px;
-    }
-
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
     .step-card {
-      background: white;
-      border-radius: 20px;
-      padding: 36px 28px;
-      border: 1px solid var(--crema-oscuro);
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
+      background: white; border-radius: 20px; padding: 36px 28px;
+      border: 1px solid var(--crema-oscuro); transition: all 0.3s; position: relative; overflow: hidden;
     }
-
     .step-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--azul-medio);
-      transform: scaleX(0);
-      transition: transform 0.3s;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--azul-medio); transform: scaleX(0); transition: transform 0.3s;
     }
-
     .step-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(30,58,138,0.1); }
     .step-card:hover::before { transform: scaleX(1); }
-
-    .step-num {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
-      font-weight: 900;
-      color: var(--crema-oscuro);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
+    .step-num { font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 900; color: var(--crema-oscuro); line-height: 1; margin-bottom: 16px; }
     .step-emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
-
-    .step-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--azul);
-      margin-bottom: 10px;
-    }
-
+    .step-title { font-size: 1.1rem; font-weight: 700; color: var(--azul); margin-bottom: 10px; }
     .step-desc { color: var(--gris); line-height: 1.6; font-size: 0.95rem; }
 
-    .video-section {
-      background: var(--azul);
-      color: white;
+    /* ── Bloque de privacidad ── */
+    .privacy-block {
+      margin-top: 56px; background: #dcfce7; border-radius: 20px;
+      padding: 36px 32px; max-width: 620px; margin-left: auto; margin-right: auto;
+      border-left: 5px solid #16a34a;
     }
+    .privacy-block h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: #16a34a;
+    }
+    .privacy-block ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .privacy-block li { font-size: 1.05rem; line-height: 1.6; display: flex; align-items: flex-start; gap: 12px; }
+    .privacy-block li .icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
 
+    .video-section { background: var(--azul); color: white; }
     .video-section .section-title { color: white; }
     .video-section .section-text { color: rgba(255,255,255,0.7); }
-
-    .video-wrapper {
-      margin-top: 40px;
-      border-radius: 20px;
-      overflow: hidden;
-      max-width: 800px;
-    }
-
-    .video-wrapper iframe {
-      width: 100%;
-      height: 500px;
-      border-radius: 20px;
-      display: block;
-      border: none;
-    }
+    .video-wrapper { margin-top: 40px; border-radius: 20px; overflow: hidden; max-width: 800px; }
+    .video-wrapper iframe { width: 100%; height: 500px; border-radius: 20px; display: block; border: none; }
 
     .btn-youtube {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #FF0000;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      transition: all 0.2s;
-      margin-top: 28px;
-      box-shadow: 0 8px 24px rgba(255,0,0,0.25);
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #FF0000; color: white; padding: 14px 28px; border-radius: 12px;
+      text-decoration: none; font-size: 1rem; font-weight: 700;
+      transition: all 0.2s; margin-top: 28px; box-shadow: 0 8px 24px rgba(255,0,0,0.25);
     }
-
-    .btn-youtube:hover {
-      background: #cc0000;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(255,0,0,0.35);
-    }
-
-    .btn-youtube svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
-    }
-
-    .capturas-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .captura {
-      background: white;
-      border-radius: 20px;
-      aspect-ratio: 9/16;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--crema-oscuro);
-      overflow: hidden;
-    }
-
-    .captura img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .btn-youtube:hover { background: #cc0000; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,0,0,0.35); }
+    .btn-youtube svg { width: 22px; height: 22px; fill: white; }
 
     .descarga-section {
       background: linear-gradient(135deg, var(--azul) 0%, #1d4ed8 100%);
-      text-align: center;
-      color: white;
+      text-align: center; color: white;
     }
-
-    .descarga-section .section-title {
-      color: white;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .descarga-section .section-text {
-      color: rgba(255,255,255,0.8);
-      margin: 0 auto 40px;
-    }
-
-    .descarga-versiones {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      max-width: 800px;
-      margin: 40px auto 0;
-    }
-
+    .descarga-section .section-title { color: white; max-width: 100%; margin-left: auto; margin-right: auto; }
+    .descarga-section .section-text { color: rgba(255,255,255,0.8); margin: 0 auto 40px; }
+    .descarga-versiones { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 40px auto 0; }
     .version-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 20px;
-      padding: 36px 28px;
-      backdrop-filter: blur(10px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      transition: all 0.3s;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px; padding: 36px 28px; backdrop-filter: blur(10px);
+      display: flex; flex-direction: column; align-items: center; gap: 14px; transition: all 0.3s;
     }
-
-    .version-card:hover {
-      background: rgba(255,255,255,0.12);
-      transform: translateY(-4px);
-    }
-
-    .version-flag {
-      font-size: 2.5rem;
-      line-height: 1;
-    }
-
-    .version-titulo {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: white;
-    }
-
-    .version-desc {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
+    .version-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+    .version-flag { font-size: 2.5rem; line-height: 1; }
+    .version-titulo { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 900; color: white; }
+    .version-desc { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 8px; text-align: center; }
     .btn-descarga-version {
-      display: inline-block;
-      background: white;
-      color: var(--azul);
-      padding: 14px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      transition: all 0.2s;
-      width: 100%;
-      text-align: center;
+      display: inline-block; background: white; color: var(--azul);
+      padding: 14px 28px; border-radius: 12px; text-decoration: none;
+      font-size: 1rem; font-weight: 700; transition: all 0.2s; width: 100%; text-align: center;
     }
+    .btn-descarga-version:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
 
-    .btn-descarga-version:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-
-    .contacto-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
+    .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .contact-form { display: flex; flex-direction: column; gap: 16px; }
-
     .form-input {
-      padding: 14px 18px;
-      border: 1px solid var(--crema-oscuro);
-      border-radius: 12px;
-      font-family: inherit;
-      font-size: 1rem;
-      background: white;
-      color: var(--negro);
-      outline: none;
-      transition: border-color 0.2s;
+      padding: 14px 18px; border: 1px solid var(--crema-oscuro); border-radius: 12px;
+      font-family: inherit; font-size: 1rem; background: white; color: var(--negro);
+      outline: none; transition: border-color 0.2s;
     }
-
     .form-input:focus { border-color: var(--azul-medio); }
     textarea.form-input { min-height: 120px; resize: vertical; }
-
     .btn-enviar {
-      background: var(--azul-medio);
-      color: white;
-      padding: 14px;
-      border-radius: 12px;
-      border: none;
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
+      background: var(--azul-medio); color: white; padding: 14px; border-radius: 12px;
+      border: none; font-family: inherit; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: all 0.2s;
     }
-
     .btn-enviar:hover { background: var(--azul); }
 
     footer {
-      background: var(--negro);
-      color: rgba(255,255,255,0.6);
-      padding: 40px 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      background: var(--negro); color: rgba(255,255,255,0.6);
+      padding: 40px 80px; display: flex; justify-content: space-between;
+      align-items: center; gap: 20px; flex-wrap: wrap;
     }
-
     footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     footer a:hover { color: white; }
-
-    .footer-social {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
+    .footer-social { display: flex; gap: 12px; align-items: center; }
     .footer-social a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      transition: all 0.2s;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); transition: all 0.2s;
     }
-
-    .footer-social a:hover {
-      background: #FF0000;
-      transform: translateY(-2px);
-    }
-
-    .footer-social svg {
-      width: 20px;
-      height: 20px;
-      fill: rgba(255,255,255,0.7);
-      transition: fill 0.2s;
-    }
-
-    .footer-social a:hover svg {
-      fill: white;
-    }
+    .footer-social a:hover { background: #FF0000; transform: translateY(-2px); }
+    .footer-social svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.7); transition: fill 0.2s; }
+    .footer-social a:hover svg { fill: white; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -621,7 +339,6 @@
       .stats { grid-template-columns: 1fr; margin: 0 24px; }
       section { padding: 60px 24px; }
       .steps-grid { grid-template-columns: 1fr; }
-      .capturas-grid { grid-template-columns: 1fr; }
       .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
       .descarga-versiones { grid-template-columns: 1fr; gap: 20px; }
       nav { padding: 16px 24px; }
@@ -634,6 +351,12 @@
 </head>
 <body>
 
+  <!-- Selector de idioma -->
+  <div class="lang-switcher">
+    <a href="#" class="active" title="Español">🇪🇸</a>
+    <a href="index-en.html" title="English">🇬🇧</a>
+  </div>
+
   <nav>
     <a href="#" class="nav-logo">
       <img src="icon.png" alt="Lee Fácil" style="height:40px; vertical-align:middle;">
@@ -643,7 +366,7 @@
       <li><a href="#historia">Historia</a></li>
       <li><a href="#descarga">Descargar</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="#descarga" class="nav-lang" lang="en">🇬🇧 English</a></li>
+      <li><a href="index-en.html" class="nav-lang" lang="en">🇬🇧 English</a></li>
     </ul>
   </nav>
 
@@ -723,6 +446,18 @@
         <p class="step-desc">En segundos tienes el texto adaptado,<br> en frases cortas y fáciles de entender.</p>
       </div>
     </div>
+
+    <!-- Bloque de privacidad en lectura fácil -->
+    <div class="privacy-block">
+      <h3>🔒 Tus fotos están seguras</h3>
+      <ul>
+        <li><span class="icon">📷</span> Sacas una foto del texto.</li>
+        <li><span class="icon">🚫</span> Tus fotos no se guardan en ningún sitio.</li>
+        <li><span class="icon">👁️</span> Solo tú puedes ver tus fotos.</li>
+        <li><span class="icon">🤝</span> No compartimos tus fotos con nadie.</li>
+        <li><span class="icon">🗑️</span> Después de leer el texto, la foto desaparece.</li>
+      </ul>
+    </div>
   </section>
 
   <section class="video-section" id="demo">
@@ -740,22 +475,6 @@
     </a>
   </section>
 
-  <section id="capturas">
-    <span class="section-label">Capturas</span>
-    <h2 class="section-title">Así se ve Lee Fácil</h2>
-    <div class="capturas-grid">
-      <div class="captura">
-        <img src="img/captura1.jpg" alt="Captura 1 de la app Lee Fácil">
-      </div>
-      <div class="captura">
-        <img src="img/captura2.jpg" alt="Captura 2 de la app Lee Fácil">
-      </div>
-      <div class="captura">
-        <img src="img/captura3.jpg" alt="Captura 3 de la app Lee Fácil">
-      </div>
-    </div>
-  </section>
-
   <section id="historia" style="background: white;">
     <span class="section-label">Historia del proyecto</span>
     <h2 class="section-title">Desde la vida real,<br>para la vida real.</h2>
@@ -769,29 +488,20 @@
     <span class="section-label" style="color:rgba(255,255,255,0.6)">Disponible ahora · Android</span>
     <h2 class="section-title">Descarga la app</h2>
     <p class="section-text">Elige tu idioma. Ambas versiones son gratuitas y para Android.</p>
-
     <div class="descarga-versiones">
-      <!-- Versión española -->
       <div class="version-card">
         <span class="version-flag">🇪🇸</span>
         <h3 class="version-titulo">Lee Fácil</h3>
         <p class="version-desc">Versión en español.<br>Convierte cualquier texto en lectura fácil.</p>
-        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk"
-           class="btn-descarga-version"
-           download>
+        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk" class="btn-descarga-version" download>
           📲 Descargar APK
         </a>
       </div>
-
-      <!-- Versión inglesa -->
       <div class="version-card">
         <span class="version-flag">🇬🇧</span>
         <h3 class="version-titulo" lang="en">Easy Read</h3>
         <p class="version-desc" lang="en">English version.<br>Turns any text into easy-to-read content.</p>
-        <a href="https://github.com/inclusiv-IA/EasyRead-en/releases/download/v1.0.0/app-release.apk"
-           class="btn-descarga-version"
-           download
-           lang="en">
+        <a href="https://github.com/inclusiv-IA/EasyRead-en/releases/download/v1.0.0/app-release.apk" class="btn-descarga-version" download lang="en">
           📲 Download APK
         </a>
       </div>
@@ -826,7 +536,7 @@
         </svg>
       </a>
     </div>
-    <div>Desarrollada con ❤️ en Gijón, Asturias</div>
+    <div>Desarrollada con ❤️ en Gijón, España</div>
   </footer>
 
 </body>
