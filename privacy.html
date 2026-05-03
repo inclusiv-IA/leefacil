@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Easy Read</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #1e3a8a;
+      --azul-medio: #2563eb;
+      --azul-claro: #eff6ff;
+      --crema: #f5f0eb;
+      --crema-oscuro: #e8e0d8;
+      --gris: #6b7280;
+      --negro: #1a1a2e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--crema);
+      color: var(--negro);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: rgba(245, 240, 235, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--crema-oscuro);
+    }
+
+    .nav-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--azul);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      color: var(--azul-medio);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-back:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--azul-claro);
+      color: var(--azul-medio);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--azul);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 24px;
+      border: 1px solid var(--crema-oscuro);
+    }
+
+    .card h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      color: var(--gris);
+      line-height: 1.8;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card a {
+      color: var(--azul-medio);
+      text-decoration: none;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    .version-label {
+      font-size: 0.8rem;
+      color: var(--gris);
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background: var(--negro);
+      color: rgba(255,255,255,0.6);
+      padding: 32px 40px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: white; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 40px 24px; }
+      h1 { font-size: 1.8rem; }
+      footer { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index-en.html" class="nav-logo">
+      <img src="icon.png" alt="Easy Read" style="height:40px; vertical-align:middle;">
+    </a>
+    <a href="index-en.html" class="nav-back">← Back</a>
+  </nav>
+
+  <div class="container">
+    <span class="badge">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="version-label">Last updated: March 2026</p>
+
+    <div class="card">
+      <h2>What is Easy Read?</h2>
+      <p>Easy Read is a mobile app.</p>
+      <p>The app turns difficult texts into easy-to-read texts.</p>
+    </div>
+
+    <div class="card">
+      <h2>What does the app do with your photos?</h2>
+      <p>The app uses your phone's camera.</p>
+      <p>You take a photo of a text.</p>
+      <p>The app reads the text from the photo.</p>
+      <p>Then it deletes the photo.</p>
+      <p>We do not save your photos.</p>
+    </div>
+
+    <div class="card">
+      <h2>Who do we share your data with?</h2>
+      <p>We use a service called Anthropic.</p>
+      <p>Anthropic reads the text from your photo to adapt it.</p>
+      <p>We do not share your data with anyone else.</p>
+      <p>You can read Anthropic's privacy policy at <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Permissions the app needs</h2>
+      <p>The app asks for permission to use your phone's camera.</p>
+      <p>This permission is needed for the app to work.</p>
+    </div>
+
+    <div class="card">
+      <h2>How to contact us</h2>
+      <p>If you have questions, write to us.</p>
+      <p>Our email is: <a href="mailto:inclusivia.es@gmail.com">inclusivia.es@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>© 2026 Easy Read · <a href="privacy.html">Privacy policy</a></div>
+  </footer>
+
+</body>
+</html>
