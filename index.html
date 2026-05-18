@@ -287,6 +287,23 @@
     .version-flag { font-size: 2.5rem; line-height: 1; }
     .version-titulo { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 900; color: white; }
     .version-desc { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 8px; text-align: center; }
+
+    /* ── Badge Google Play ── */
+    .google-play-badge {
+      display: inline-block;
+      transition: transform 0.2s, opacity 0.2s;
+      text-decoration: none;
+    }
+    .google-play-badge:hover {
+      transform: translateY(-2px);
+      opacity: 0.88;
+    }
+    .google-play-badge svg {
+      height: 64px;
+      width: auto;
+      display: block;
+    }
+
     .btn-descarga-version {
       display: inline-block; background: white; color: var(--azul);
       padding: 14px 28px; border-radius: 12px; text-decoration: none;
@@ -376,8 +393,28 @@
       <h1>Cualquier texto,<br>en lectura fácil.</h1>
       <p>Lee Fácil convierte textos difíciles<br>en frases cortas y sencillas al instante.<br>Solo saca una foto.</p>
       <div class="hero-buttons">
-        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk" class="btn-primary" download>
-          📲 Descargar gratis
+        <!-- Botón hero actualizado a Google Play -->
+        <a href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil&hl=es_419"
+           target="_blank" rel="noopener" class="google-play-badge" aria-label="Descargar Lee Fácil en Google Play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 59" role="img" aria-label="Disponible en Google Play">
+            <rect width="200" height="59" rx="8" fill="#1a1a1a"/>
+            <rect width="200" height="59" rx="8" fill="none" stroke="#555" stroke-width="1"/>
+            <!-- Play icon -->
+            <path d="M18 15 L18 44 L34 29.5 Z" fill="url(#pg1)"/>
+            <path d="M18 15 L34 29.5 L40 23 L22 13 Z" fill="#60cdff"/>
+            <path d="M18 44 L34 29.5 L40 36 L22 46 Z" fill="#f7395a"/>
+            <path d="M34 29.5 L40 23 L46 29.5 L40 36 Z" fill="#ffca28"/>
+            <defs>
+              <linearGradient id="pg1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#60cdff"/>
+                <stop offset="100%" stop-color="#3bdd9a"/>
+              </linearGradient>
+            </defs>
+            <!-- Texto superior -->
+            <text x="54" y="23" font-family="Arial, sans-serif" font-size="9" fill="#ccc" letter-spacing="0.5">Disponible en</text>
+            <!-- Texto principal -->
+            <text x="53" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" letter-spacing="0.3">Google Play</text>
+          </svg>
         </a>
         <a href="#como-funciona" class="btn-secondary">Ver cómo funciona</a>
         <a href="https://github.com/inclusiv-IA/EasyRead-en/releases/download/v1.0.0/app-release.apk" class="btn-english" download lang="en">
@@ -493,8 +530,26 @@
         <span class="version-flag">🇪🇸</span>
         <h3 class="version-titulo">Lee Fácil</h3>
         <p class="version-desc">Versión en español.<br>Convierte cualquier texto en lectura fácil.</p>
-        <a href="https://github.com/inclusiv-IA/leefacil/releases/download/v1.0.2/app-release.apk" class="btn-descarga-version" download>
-          📲 Descargar APK
+        <!-- Badge oficial Google Play -->
+        <a href="https://play.google.com/store/apps/details?id=com.inclusivia.es.leefacil&hl=es_419"
+           target="_blank" rel="noopener" class="google-play-badge"
+           aria-label="Descargar Lee Fácil en Google Play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 59" role="img" aria-label="Disponible en Google Play">
+            <rect width="200" height="59" rx="8" fill="#1a1a1a"/>
+            <rect width="200" height="59" rx="8" fill="none" stroke="#555" stroke-width="1"/>
+            <path d="M18 15 L18 44 L34 29.5 Z" fill="url(#pg2)"/>
+            <path d="M18 15 L34 29.5 L40 23 L22 13 Z" fill="#60cdff"/>
+            <path d="M18 44 L34 29.5 L40 36 L22 46 Z" fill="#f7395a"/>
+            <path d="M34 29.5 L40 23 L46 29.5 L40 36 Z" fill="#ffca28"/>
+            <defs>
+              <linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#60cdff"/>
+                <stop offset="100%" stop-color="#3bdd9a"/>
+              </linearGradient>
+            </defs>
+            <text x="54" y="23" font-family="Arial, sans-serif" font-size="9" fill="#ccc" letter-spacing="0.5">Disponible en</text>
+            <text x="53" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" letter-spacing="0.3">Google Play</text>
+          </svg>
         </a>
       </div>
       <div class="version-card">
